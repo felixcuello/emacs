@@ -1,0 +1,7 @@
+auto-save-list/*
+elpa/*
+network-security.data
+transient/*
+personal.el
+.cache/
+places
