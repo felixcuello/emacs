@@ -12,12 +12,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  FLYCHECK features
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(set-popup-rule! "^\\*Flycheck errors\\*$" :side 'bottom :size 0.1)
+(set-popup-rule! "^\\*Flycheck errors\\*$" :side 'bottom :size 0.2)
 (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
 (setq flycheck-gcc-language-standard "c++11")
 
-;; (setq evil-default-state 'emacs)
+;; I don't like emacs to ask me to QUIT ever time
+(setq confirm-kill-emacs nil)
 
+;; (setq evil-default-state 'emacs)
 ;; (setq doom-leader-key "M-m"
 ;;       doom-leader-alt-key "M-m")
 
@@ -35,8 +37,9 @@
 
 (setq doom-font (font-spec
 ;                 :family "Source Code Pro for Powerline"
-                 :family "Inconsolata for Powerline"
-                 :size 26
+                 ;; :family "Inconsolata for Powerline"
+                 :family "Space Mono for Powerline"
+                 :size 24
 ;                 :weight 'semi-light
                  )
       )
@@ -76,10 +79,9 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-snazzy)
-(setq doom-theme 'doom-monokai-classic)
+;; (setq doom-theme 'doom-monokai-classic)
 ;; (setq doom-theme 'doom-monokai-pro)
-;; (setq doom-theme 'doom-dark+)
+(setq doom-theme 'doom-challenger-deep)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
