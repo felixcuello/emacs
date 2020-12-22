@@ -12,9 +12,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  FLYCHECK features
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(set-popup-rule! "^\\*Flycheck errors\\*$" :side 'bottom :size 0.2)
+(set-popup-rule! "^\\*Flycheck errors\\*$" :side 'bottom :size 0.05)
 (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
 (setq flycheck-gcc-language-standard "c++11")
+
 
 ;; I don't like emacs to ask me to QUIT ever time
 (setq confirm-kill-emacs nil)
@@ -39,7 +40,7 @@
 ;                 :family "Source Code Pro for Powerline"
                  ;; :family "Inconsolata for Powerline"
                  :family "Space Mono for Powerline"
-                 :size 24
+                 :size 22
 ;                 :weight 'semi-light
                  )
       )
