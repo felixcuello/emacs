@@ -26,6 +26,8 @@
 
 (setq neo-window-width 30)
 
+(setq search-invisible nil)
+
 ;; (setq neo-autorefresh 1)
 ;; (setq neo-smart-open 1)
 
@@ -40,7 +42,7 @@
 ;                 :family "Source Code Pro for Powerline"
                  ;; :family "Inconsolata for Powerline"
                  :family "Space Mono for Powerline"
-                 :size 22
+                 :size 24
 ;                 :weight 'semi-light
                  )
       )
@@ -80,9 +82,13 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-monokai-classic)
+(setq doom-theme 'doom-monokai-classic)
 ;; (setq doom-theme 'doom-monokai-pro)
-(setq doom-theme 'doom-challenger-deep)
+;; (setq doom-theme 'doom-challenger-deep)
+;; (setq doom-theme 'doom-laserwave)
+;; (setq doom-theme 'doom-snazzy)
+;; (setq doom-theme 'doom-city-lights)
+;; (setq doom-theme 'doom-mono-light)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
