@@ -49,19 +49,21 @@
 
 (global-set-key (kbd "C-?") 'counsel-flycheck)
 
-(global-set-key (kbd "C-,") 'dumb-jump-go)
-(global-set-key (kbd "C-.") 'dumb-jump-back)
+(global-set-key (kbd "C->") 'dumb-jump-go)
+(global-set-key (kbd "C-<") 'dumb-jump-back)
 
 (global-set-key (kbd "C-b") 'counsel-buffer-or-recentf)
-(global-set-key (kbd "C-d") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-f") 'counsel-ag)
+(global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "C-o") 'treemacs-add-project)
 (global-set-key (kbd "C-n") 'evil-buffer-new)
 (global-set-key (kbd "C-p") 'projectile-find-file)
-(global-set-key (kbd "C-t") 'neotree-find)
 
+(global-set-key (kbd "M-d") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-w") 'kill-this-buffer)
+(global-set-key (kbd "∂") 'mc/mark-next-like-this)
 (global-set-key (kbd "∑") 'kill-this-buffer)
+
+(global-set-key [s-mouse-1] '+fold/toggle)
 
 
 ; Shortcuts
@@ -89,6 +91,7 @@
 ;; (setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-city-lights)
 ;; (setq doom-theme 'doom-mono-light)
+;; (setq doom-theme 'doom-acario-dark)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
