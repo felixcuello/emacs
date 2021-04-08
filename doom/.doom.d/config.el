@@ -42,7 +42,7 @@
 ;                 :family "Source Code Pro for Powerline"
                  ;; :family "Inconsolata for Powerline"
                  :family "Space Mono for Powerline"
-                 :size 24
+                 :size 22
 ;                 :weight 'semi-light
                  )
       )
@@ -58,10 +58,10 @@
 (global-set-key (kbd "C-n") 'evil-buffer-new)
 (global-set-key (kbd "C-p") 'projectile-find-file)
 
-(global-set-key (kbd "M-d") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-w") 'kill-this-buffer)
-(global-set-key (kbd "∂") 'mc/mark-next-like-this)
-(global-set-key (kbd "∑") 'kill-this-buffer)
+(global-set-key (kbd "M-d") 'mc/mark-next-like-this)
+(global-set-key (kbd "∂")   'mc/mark-next-like-this)
+(global-set-key (kbd "∑")   'kill-this-buffer)
 
 (global-set-key [s-mouse-1] '+fold/toggle)
 
