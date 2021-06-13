@@ -11,7 +11,12 @@
 (unless (package-installed-p 'inf-ruby)
   (package-install 'inf-ruby))
 
-(package! haml-mode)
+(package! haml-mode)                                    ;; :-| don't remember what is this
+(package! git-link)                                     ;; Get a git link
+(package! protobuf-mode)                                ;; Google protocol buffer
+(package! rubocop)                                      ;; Rubocop
+(package! exec-path-from-shell)                         ;; To get ENV vars from shell
+(package! rbenv)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
