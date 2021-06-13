@@ -17,6 +17,27 @@
 (setq flycheck-gcc-language-standard "c++11")
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; To use rben v
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(when (daemonp)
+  (exec-path-from-shell-initialize))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;  Treemacs configuration
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(map! :after treemacs
+      :leader
+      :n "-" #'evil-window-prev)
+
+(map! :after treemacs
+      :leader
+      :n "=" #'evil-window-next)
+
+(setq treemacs-follow-mode 1)
+
+
 ;; I don't like emacs to ask me to QUIT ever time
 (setq confirm-kill-emacs nil)
 
@@ -42,7 +63,7 @@
 ;                 :family "Source Code Pro for Powerline"
                  ;; :family "Inconsolata for Powerline"
                  :family "Space Mono for Powerline"
-                 :size 22
+                 :size 18
 ;                 :weight 'semi-light
                  )
       )
@@ -65,7 +86,6 @@
 
 (global-set-key [s-mouse-1] '+fold/toggle)
 
-
 ; Shortcuts
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
@@ -84,14 +104,14 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-monokai-classic)
+;;(setq doom-theme 'doom-monokai-classic)
 ;; (setq doom-theme 'doom-monokai-pro)
 ;; (setq doom-theme 'doom-challenger-deep)
 ;; (setq doom-theme 'doom-laserwave)
 ;; (setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-city-lights)
 ;; (setq doom-theme 'doom-mono-light)
-;; (setq doom-theme 'doom-acario-dark)
+(setq doom-theme 'doom-acario-dark)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
