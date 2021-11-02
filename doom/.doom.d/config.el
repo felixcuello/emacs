@@ -23,7 +23,6 @@
 (when (daemonp)
   (exec-path-from-shell-initialize))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  Treemacs configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -49,6 +48,10 @@
 
 (setq search-invisible nil)
 
+;; Shows the diff color in the margin
+(setq diff-hl-mode 1)
+(setq diff-hl-dir-mode 1)
+
 ;; (setq neo-autorefresh 1)
 ;; (setq neo-smart-open 1)
 
@@ -60,15 +63,17 @@
 (setq global-undo-tree-mode 1) ;; TODO: CHECK WHY THIS IS NOT WORKING
 
 (setq doom-font (font-spec
-                 ;; :family "Source Code Pro for Powerline"
-                 ;  :family "Inconsolata for Powerline"
-                 ;; :family "Space Mono for Powerline"
-                 ;; :family "Roboto Mono Light for Powerline"
                  :family "Roboto Mono Light for Powerline"
-                 :size 18
+                 ;; :family "Roboto Mono for Powerline"
+                 ;; :family "Source Code Pro for Powerline"
+                 ;; :family "Inconsolata for Powerline"
+                 ;; :family "Space Mono for Powerline"
+                 :size 17
 ;                 :weight 'semi-light
                  )
       )
+
+(global-set-key (kbd "÷") 'comment-or-uncomment-region)
 
 (global-set-key (kbd "C-?") 'counsel-flycheck)
 
@@ -106,13 +111,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;(setq doom-theme 'doom-monokai-classic)
-;; (setq doom-theme 'doom-acario-dark)
-(setq doom-theme 'doom-monokai-pro)
-;; (setq doom-theme 'doom-challenger-deep)
+(add-to-list 'custom-theme-load-path "~/.doom.d/themes")
+;; (setq doom-theme 'doom-molokai-dark)
+;; (setq doom-theme 'doom-monokai-classic)
 ;; (setq doom-theme 'doom-laserwave)
+;; (setq doom-theme 'doom-acario-dark)
+;; (setq doom-theme 'doom-monokai-pro)
+(setq doom-theme 'doom-monokai-pro-dark)
 ;; (setq doom-theme 'doom-snazzy)
-;; (setq doom-theme 'doom-city-lights)
+;; (setq doom-theme 'doom-challenger-deep)
 ;; (setq doom-theme 'doom-flatwhite)
 ;(setq doom-theme 'doom-nord-light)
 ;; (setq doom-theme 'doom-tomorrow-night)
