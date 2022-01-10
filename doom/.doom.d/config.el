@@ -112,16 +112,16 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (add-to-list 'custom-theme-load-path "~/.doom.d/themes")
+(setq doom-theme 'doom-monokai-pro-dark)
+;; (setq doom-theme 'doom-nord-light)
 ;; (setq doom-theme 'doom-molokai-dark)
 ;; (setq doom-theme 'doom-monokai-classic)
 ;; (setq doom-theme 'doom-laserwave)
 ;; (setq doom-theme 'doom-acario-dark)
 ;; (setq doom-theme 'doom-monokai-pro)
-(setq doom-theme 'doom-monokai-pro-dark)
 ;; (setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-challenger-deep)
 ;; (setq doom-theme 'doom-flatwhite)
-;(setq doom-theme 'doom-nord-light)
 ;; (setq doom-theme 'doom-tomorrow-night)
 ;(setq doom-theme 'doom-tomorrow-day)
 
